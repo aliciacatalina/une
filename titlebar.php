@@ -1,11 +1,10 @@
  <div>
- 
     <?php
         if(loggedin()==true){
             $user_id=$_SESSION['user_id'];
             $log=$con->prepare("SELECT idUsuario, tipoUsuario FROM Usuarios WHERE idUsuario='$user_id'");
             $log->execute(); // missing ()
-            $log->store_result(); 
+            $log->store_result();
             $log->bind_result($user_id, $user_level);
             if($log->fetch()) //fetching the contents of the row
             {

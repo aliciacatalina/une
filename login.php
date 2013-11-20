@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>LOGIN</title>
@@ -17,6 +18,13 @@ Password:<br/>
 <br/><br/>
 <input type='submit' name='submit' value='login'>
 </form>
+
+<div class="status">
+    <?php echo $error; ?>
+</div>
+
+</body>
+</html>
 <?php
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
@@ -42,7 +50,7 @@ if(isset($_POST['submit'])){
 
     }
     else {
-        echo "INVALID USERNAME/PASSWORD Combination!".$username.$user_id.$password;
+        $error = "INVALID USERNAME/PASSWORD Combination!".$username.$user_id.$password;
     }
     $stmt->close();
 }
@@ -52,5 +60,3 @@ else
 }
 $con->close();
 ?>
-</body>
-</html>
