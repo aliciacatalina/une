@@ -2,22 +2,23 @@
 <html>
 <head>
 <title>LOGIN</title>
-<link rel= "stylesheet" href="../dist/css/bootstrap.css" >
+<link rel= "stylesheet" href="dist/css/bootstrap.css" >
 </head>
 <body>
 <?php include 'connect.php';?>
 <?php include 'functions.php';?>
+<div class="container">
 
+
+<form action ="" method="post" class="form-signin">
 <h3>LOGIN HERE:</h3>
-<form action ="" method="post">
-
 User Name:<br/>
-<input type='text' name='username' />
+<input type='text' name='username' class="form-control"/>
 <br/><br/>
 Password:<br/>
-<input type='password' name='password' />
+<input type='password' name='password' class="form-control"/>
 <br/><br/>
-<input type='submit' name='submit' value='login'>
+<button type='submit' name='submit' value='login' class="btn btn-lg btn-primary btn-block">Sign In</button>
 </form>
 
 <div class="status">
