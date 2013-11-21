@@ -28,6 +28,8 @@ if(loggedin()==true)
 				echo '<div><a href="titulosSuperAdmin.php?seccion='.$id.'">'.$seccion.'</a></div>';
 			}
 
+			echo '<div><a href="addSection.php">Agregar Seccion</a></div>';
+
 		}
 
 		if($user_level=='admin')

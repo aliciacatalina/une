@@ -1,8 +1,11 @@
-<?php include 'titlebar.php';?>
+<?php include 'functions.php';?>
+<h1> Usuarios </h1>
 <?php
+echo loggedin();
 if(loggedin()==true)
 {
-	$user_id=$_SESSION['user_id'];
+	echo 'what';
+	//$user_id=$_SESSION['user_id'];
 	$log=$con->prepare("SELECT idUsuario, tipoUsuario FROM usuarios WHERE idUsuario='$user_id'");
 	$log->execute(); // missing ()
 	$log->store_result();
