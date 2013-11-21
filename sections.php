@@ -1,4 +1,5 @@
- <div>
+ <div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+ <div class="list-group">
  <?php include 'titlebar.php';?>
 <?php
 if(loggedin()==true)
@@ -25,7 +26,7 @@ if(loggedin()==true)
 				$seccion = $row["nombreSeccion"];
 				$id = $row["idSeccion"];
 				//$newdir = $con->query("SELECT
-				echo '<div><a href="titulosSuperAdmin.php?seccion='.$id.'">'.$seccion.'</a></div>';
+				echo '<a class="list-group-item" href="titulosSuperAdmin.php?seccion='.$id.'">'.$seccion.'</a>';
 			}
 
 			echo '<div><a href="addSection.php">Agregar Seccion</a></div>';
@@ -52,3 +53,5 @@ if(loggedin()==true)
 }?>
 
 </div>
+ </div>
+ 
