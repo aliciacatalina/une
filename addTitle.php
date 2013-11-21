@@ -10,15 +10,11 @@
 Nombre:<br/>
 <input type='text' name='title-name' class="form-control"/>
 <br/><br/>
-Tipo:<br/>
-<input type='text' name='type' class="form-control"/>
-<br/><br/>
 Idioma:
 <input type='text' name='language' class="form-control"/>
 Opcional
 <input type='text' name='optional' class="form-control"/>
-Id: (Arreglen esto en la DB)
-<input type='text' name='id' class="form-control"/>
+
 <button type='submit' name='submit' value='login' class="btn btn-lg btn-primary btn-block">Agregar Titulo</button>
 </form>
 
