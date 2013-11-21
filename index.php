@@ -1,3 +1,7 @@
+<?php include 'connect.php';?>
+<?php include 'functions.php';?>
+<?php include 'sections.php';?>
+<?php include 'titlebar.php';?>
 <html>
 <head>
 <title>LOGIN</title>
@@ -6,10 +10,6 @@
 <script src="dist/js/bootstrap.js"></script>
 </head>
 <body>
-<?php include 'connect.php';?>
-<?php include 'functions.php';?>
-<?php include 'sections.php';?>
-<?php include 'titlebar.php';?>
 
 
 </body>
