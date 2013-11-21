@@ -24,7 +24,7 @@ Password:<br/>
 <div class="status">
     <?php echo $error; ?>
 </div>
-
+</div>
 </body>
 </html>
 <?php
