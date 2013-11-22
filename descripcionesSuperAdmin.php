@@ -35,8 +35,7 @@
 
             if($log->fetch()) //fetching the contents of the row
             {
-                if($user_level=='superadmin')
-				{
+
 					$gettit = $con->query("SELECT nombreTitlo FROM titulos WHERE idTitulo=".$_GET['title']);
 					$res = $con->query("SELECT descripcion, idDescripcion FROM descripcion WHERE idTitulo=".$_GET['title']." AND idCampus ='$campus'");
 					$rows = array();
@@ -57,7 +56,7 @@
 						$titulo = $row["nombreTitlo"];
 						echo '<div><h3> '.$titulo.' </h3></div>';
 					}
-	echo "</div>";
+					echo "</div>";
 					foreach($rows as $row)
 					{
 						$descripcion = $row["descripcion"];
@@ -65,12 +64,13 @@
 						echo '<div id="descripcion"> '.$descripcion.' </div>';
 						// echo '<button class="btn">';
 						echo'<a href="editDescription.php?title=' .$_GET['title'].'&description=' .$id. '">Editar</a>';
+						echo '<a href="addDescription.php?title=' .$_GET['title'].'&description=' .$id. '"><button class="btn">Agregar Descripcion</button></a>';
 					}
-                }
+
             }
 		}
 
 ?>
-	
+
 	</div>
 </html>

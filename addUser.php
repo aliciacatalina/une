@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
 		{
 		  die('Could not enter data: ' . mysql_error());
 		}
-		echo "Entered data successfully\n";
+		echo '<div class="alert alert-success">Entered data successfully</div>';
 	}
 }
 ?>

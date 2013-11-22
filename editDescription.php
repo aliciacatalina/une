@@ -31,26 +31,44 @@
 			echo '<div><h3> '.$title.' </h3></div>';
 		    }
 		    foreach($rows as $row){
-		    $description= $row["descripcion"];
-		    echo '
-		    	<form action="" method="post">
-		    		<textarea name="description">'.$description.'</textarea>
-		    		<button type="submit" name="submit" value="save" class="btn btn-lg btn-primary btn-block">Guardar Cambios</button>
-		    	</form>';
+		    $description = $row["descripcion"];
 
-		    	if(isset($_POST['submit'])){
-
-		    		$newdescription = $_GET['description'];
-		    		echo $newdescription;
-		    	}
 		    }
 
-			 if(! $res )
-			{
-			  die('Could not enter data: ' . mysql_error());
-			}
-			echo "Entered data successfully\n";
 
         }
     ?>
+
+	<div class="container">
+		<form role="form" action="" method="post">
+			<div class="form-group">
+				<h2> <?php $title ?> </h2>
+				<h3>Editar Descipcion</h3>
+				<label for="">Descripcion</label>
+				    <textarea rows="4" cols="50" name="edited_description"><?php echo $description; ?></textarea>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+					<button type='submit' name='submit' value='save' class="btn btn-lg btn-primary btn-block">GuardarCambios</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<?php
+		if(isset($_POST['submit'])){
+			if (loggedin() == 'true') {
+
+			    $newdescription = $_POST['edited_description'];
+			    //Cambiar el estatus, pero no se cual es cuaaal
+			    $query = "UPDATE `descripcion` SET `descripcion`= '" .$newdescription. "'WHERE `idDescripcion`=".$_GET['description'];
+			    $result = $con->query($query) or die($con->error);
+
+			    if(! $result )
+				{
+				  die('Could not enter data: ' . mysql_error());
+				}
+				echo '<div class="alert alert-success">Entered data successfully</div>';
+			}
+		}
+	?>
 </html>
