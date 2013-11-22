@@ -7,23 +7,29 @@
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="dist/js/bootstrap.js"></script>
 </head>
-<h1> Agregar Seccion </h1>
 <div class="container">
-
-
-<form action ="" method="post" class="form-signin">
+<form role="form" action="" method="post">
+<div class="form-group">
+<h2> Agregar Seccion </h2>
 <h3>Nueva Seccion:</h3>
-Nombre:<br/>
-<input type='text' name='section-name' class="form-control"/>
-<br/><br/>
-Tipo:<br/>
-<input type='text' name='type' class="form-control"/>
-<br/><br/>
-Idioma:
-<input type='text' name='language' class="form-control"/>
-Opcional
-<input type='text' name='optional' class="form-control"/>
+<label for="name">Nombre</label>
+    <input type="text" class="form-control" id="name" placeholder="Ingresa tu Nombre" name="section-name">
+<label for="tipo">Tipo</label>
+    <input type="text" class="form-control" id="tipo" placeholder="Ingres el Tipo" name="type">
+  <label for="ioma">Idioma</label>
+    <input type="text" class="form-control" id="idioma" placeholder="Ingresa el Idioma" name="language">
+<label for="opcional">Opcional</label>
+<select class="form-control" name="opcional">
+  <option value="0">0</option>
+  <option value="1">1</option>
+</select>
+
+</div>
+<div class="row">
+<div class="col-md-4">
 <button type='submit' name='submit' value='login' class="btn btn-lg btn-primary btn-block">Agregar Seccion</button>
+</div>
+</div>
 </form>
 
 <?php
@@ -48,4 +54,6 @@ if(isset($_POST['submit'])){
 	}
 }
 ?>
+
+</div>
 </html>
