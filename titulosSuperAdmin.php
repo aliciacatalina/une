@@ -7,6 +7,8 @@
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="dist/js/bootstrap.js"></script>
 </head>
+<div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+<div class="list-group">
     <?php
     if (!isset($_GET['seccion'])) exit;
     	$section = $_GET['seccion'];
@@ -33,7 +35,7 @@
 						$title = $row["nombreTitlo"];
 						$id = $row["idTitulo"];
 
-						echo '<div><a href="descripcionesSuperAdmin.php?title='.$id.'">'.$title.'</a></div>';
+						echo '<a class="list-group-item" href="descripcionesSuperAdmin.php?title='.$id.'">'.$title.'</a>';
 					}
 
 					echo '<div class="container">';
@@ -42,5 +44,7 @@
 			}
 		}
 ?>
+</div>
+</div>
 
 </html>
