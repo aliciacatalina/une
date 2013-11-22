@@ -61,7 +61,8 @@
 						$descripcion = $row["descripcion"];
 						$id = $row["idDescripcion"];
 						echo '<div id="descripcion"> '.$descripcion.' </div>';
-						echo '<button class="btn"><a href="editDescription">Editar</a></button>';
+						// echo '<button class="btn">';
+						echo'<a href="editDescription.php?title=' .$_GET['title'].'&description=' .$id. '">Editar</a>';
 					}
                 }
             }

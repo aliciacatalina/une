@@ -27,7 +27,7 @@ Tipo (Administrador/Superadministrador):<br/>
 Campus:
 <input type='text' name='campus' class="form-control"/>
 
-<button type='submit' name='submit' value='login' class="btn btn-lg btn-primary btn-block">Agregar Seccion</button>
+<button type='submit' name='submit' value='user' class="btn btn-lg btn-primary btn-block">Agregar Seccion</button>
 </form>
 
 <?php
