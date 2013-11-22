@@ -7,6 +7,8 @@
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="dist/js/bootstrap.js"></script>
 	</head>
+	<div class="container">
+	<div class="jumbotron">
     <?php
     if (!isset($_GET['title'])) exit;
         if(loggedin()==true)
@@ -55,7 +57,7 @@
 						$titulo = $row["nombreTitlo"];
 						echo '<div><h3> '.$titulo.' </h3></div>';
 					}
-
+	echo "</div>";
 					foreach($rows as $row)
 					{
 						$descripcion = $row["descripcion"];
@@ -68,5 +70,6 @@
 		}
 
 ?>
-
+	
+	</div>
 </html>
