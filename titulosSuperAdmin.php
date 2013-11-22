@@ -1,7 +1,12 @@
- <div>
 <?php include 'connect.php';?>
 <?php include 'functions.php';?>
 <?php include 'titlebar.php';?>
+<html>
+<head>
+	<link rel= "stylesheet" href="dist/css/bootstrap.css" >
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+</head>
     <?php
     if (!isset($_GET['seccion'])) exit;
     	$section = $_GET['seccion'];
@@ -38,4 +43,4 @@
 		}
 ?>
 
-</div>
+</html>

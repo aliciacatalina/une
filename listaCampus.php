@@ -1,7 +1,12 @@
- <div>
 <?php include 'connect.php';?>
 <?php include 'functions.php';?>
 <?php include 'titlebar.php';?>
+<html>
+<head>
+    <link rel= "stylesheet" href="dist/css/bootstrap.css" >
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+</head>
 <?php
 if(loggedin()==true){
     $user_id=$_SESSION['user_id'];
@@ -15,7 +20,8 @@ if(loggedin()==true){
     $id = $row["idCampus"];
     echo '<div><a href="seccion.php?idCampus='.$id.'">'.$title.'</a></div>';
     }
+    echo '<a href="addCampus.php">Agregar Campus</a>';
 }
 ?>
 
-</div>
+</html>

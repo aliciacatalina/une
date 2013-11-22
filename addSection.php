@@ -1,6 +1,12 @@
 <?php include 'functions.php' ;?>
 <?php include 'connect.php' ;?>
-
+<?php include 'titlebar.php' ;?>
+<html>
+<head>
+	<link rel= "stylesheet" href="dist/css/bootstrap.css" >
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+</head>
 <h1> Agregar Seccion </h1>
 <div class="container">
 
@@ -42,3 +48,4 @@ if(isset($_POST['submit'])){
 	}
 }
 ?>
+</html>
